@@ -4,6 +4,7 @@
 
 
 
+
 int main()
 {
 	int id;
@@ -15,7 +16,7 @@ int main()
 	if(id == 0)
 	{
 		printf("I'm child process\n");
-		printf("Child process id : %d\n", getpid());
+		printf("Child process id : %d\n\n", getpid());
 
 
 
@@ -24,7 +25,7 @@ int main()
 	{
 		printf("I'm parent process\n");
 		printf("parent process id : %d\n" , getppid());
-		
+		printf("\n";)
 
 
 	}
