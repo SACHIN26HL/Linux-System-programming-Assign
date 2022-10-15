@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+
+
+int main()
+{
+
+	int fd;
+
+
+
+	fd = open("newfile.txt",O_CREAT | O_WRONLY);
+
+	if(fd == -1)
+	{
+
+		perror("error in file create\n");
+		return 0;
+	}
+
+
+	write(fd, "wert123456789\n", 20);
+	printf("file created\n");
+	close(fd);
+
+	return 0;
+}
